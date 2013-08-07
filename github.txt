@@ -1,8 +1,0 @@
-GitHub Repo 
-Jenney Grover
-Buddy Trainer
-
-
-Repo: 				https://github.com/o61839/ASD_week1
-
-gh-pages: 			http://o61839.github.io/ASD_week1/

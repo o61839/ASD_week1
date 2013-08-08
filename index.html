@@ -30,17 +30,17 @@
 		<link href="css/main.css" rel="stylesheet" type="text/css" /> 
 	<body>
 		<section data-role="page" id="homepage" data-title="ViewSource: Home">
-			<header data-role="header" data-position="fixed">
+			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
 			<section data-role="content">
 				<p>What are you going to tackle today?</p>
-				<a href="#aerobics id="aerobics" data-role="button">Aerobics</a> 
-				<a href="#lifting id="lifting" data-role="button">Lifting</a> 
-			
-				
+				<section data-role="control">
+					<a href="#aerobics id="aerobicsbtn" data-role="button" data-icon="arrow-r" data-iconpos="right">Aerobics</a> 
+					<a href="#lifting id="liftingbtn" data-role="button" data-icon="arrow-r" data-iconpos="right">Lifting</a> 
+				</section>
 			</section>
-			<footer data-role="footer" data-position="fixed" data-theme="a">
+			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
         		<section data-role="navbar" data-theme="a">
         			<ul>
         				<li><a href="#" data-role="button" data-icon="home" data-iconpos="right" class="ui-btn-active ui-state-persist" data-theme="a">Home</a></li>
@@ -52,7 +52,7 @@
 		</section> <!-- /#homepage -->
 		
 		<section data-role="page" id="find" data-title="ViewSource: Find">
-			<header data-role="header" data-position="fixed">
+			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
 			<section data-role="content">
@@ -61,7 +61,7 @@
 			
 				
 			</section>
-			<footer data-role="footer" data-position="fixed" data-theme="a">
+			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
         		<section data-role="navbar" data-theme="a">
         			<ul>
         				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
@@ -73,7 +73,7 @@
 		</section> <!-- /#find -->
 		
 		<section data-role="page" id="new" data-title="ViewSource: New">
-			<header data-role="header" data-position="fixed">
+			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
 			<section data-role="content">
@@ -82,7 +82,7 @@
 			
 				
 			</section>
-			<footer data-role="footer" data-position="fixed" data-theme="a">
+			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
         		<section data-role="navbar" data-theme="a">
         			<ul>
         				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
@@ -92,6 +92,49 @@
         		</section>
         	</footer>
 		</section> <!-- /#new -->
+		
+		<section data-role="page" id="aerobics" data-title="ViewSource: Aerobics">
+			<header data-role="header" data-position="fixed" data-id="vs_header">
+				<h1>Minute 2 Lose</h1>
+			</header>
+			<section data-role="content">
+				<p>Aerobics</p>
+				
+			
+				
+			</section>
+			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
+        		<section data-role="navbar" data-theme="a">
+        			<ul>
+        				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
+        				<li><a href="#find" data-role="button" data-icon="search" data-iconpos="right" data-theme="a">Find</a></li>
+        				<li><a href="#new" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">New</a></li>
+        			</ul>
+        		</section>
+        	</footer>
+		</section> <!-- /#aerobics -->
+		
+		<section data-role="page" id="lifting" data-title="ViewSource: Lifting">
+			<header data-role="header" data-position="fixed" data-id="vs_header">
+				<h1>Minute 2 Lose</h1>
+			</header>
+			<section data-role="content">
+				<p>Lifting</p>
+				
+			
+				
+			</section>
+			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
+        		<section data-role="navbar" data-theme="a">
+        			<ul>
+        				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
+        				<li><a href="#find" data-role="button" data-icon="search" data-iconpos="right" data-theme="a">Find</a></li>
+        				<li><a href="#new" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">New</a></li>
+        			</ul>
+        		</section>
+        	</footer>
+		</section> <!-- /#lifting -->
+		
 		<!-- The link for the jQuery code -->
 		<script src="js/jquery.js"></script>
 		<!-- The link for the jQuery Mobile code -->

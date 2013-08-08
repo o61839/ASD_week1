@@ -8,3 +8,20 @@ $("#homepage footer a").on("click", function() {
 	//within the footer-element of the #products iD
 	//do something...
 });
+
+$('#find').on('pageinit', function(){
+	//code needed for home page goes here
+});	
+
+$('#new').on('pageinit', function(){
+	//code needed for home page goes here
+});	
+
+$('#aerobics').on('pageinit', function(){
+	//code needed for home page goes here
+});	
+
+$('#lifting').on('pageinit', function(){
+	//code needed for home page goes here
+});	
+

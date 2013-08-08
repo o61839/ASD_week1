@@ -32,12 +32,13 @@
 		<section data-role="page" id="homepage" data-title="ViewSource: Home">
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
+				<a href="#info" data-role="button" data-icon="info" data-iconpos="right">Info</a>
 			</header>
 			<section data-role="content">
 				<p>What are you going to tackle today?</p>
 				<section data-role="control">
-					<a href="#aerobics id="aerobicsbtn" data-role="button" data-icon="arrow-r" data-iconpos="right">Aerobics</a> 
-					<a href="#lifting id="liftingbtn" data-role="button" data-icon="arrow-r" data-iconpos="right">Lifting</a> 
+					<a href="#aerobics" data-role="button" data-icon="arrow-r" data-iconpos="right">Aerobics</a> 
+					<a href="#lifting" data-role="button" data-icon="arrow-r" data-iconpos="right">Lifting</a> 
 				</section>
 			</section>
 			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
@@ -50,15 +51,13 @@
         		</section>
         	</footer>
 		</section> <!-- /#homepage -->
-		
+			
 		<section data-role="page" id="find" data-title="ViewSource: Find">
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
 			<section data-role="content">
 				<p>What workout do you want to find? </p>
-				
-			
 				
 			</section>
 			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
@@ -78,10 +77,46 @@
 			</header>
 			<section data-role="content">
 				<p>Let's Add a Workout! </p>
-				
-			
-				
 			</section>
+			<form action="" method="post" id="liftingForm" data-theme="b">
+					<label for="liftForm">Choices:</label>
+					<div data-role="fieldcontain">
+							<label for="liftingWorkout">Lifting</label>
+							<select name="liftingWorkout" id="liftingWorkout" data-native-menu="false">
+								<option data-placeholder="true">Select a Workout</option>
+								<option value="bicepcurl">bicep curl</option>
+								<option value="triceppress">tricep press</option>
+								<option value="pushup">pushup</option>
+								<option value="shoulderraises">shoulder raises</option>
+								<option value="squats">squats</option>
+								<option value="lunges">lunges</option>
+								<option value="calfraises">calf raises</option>
+							</select>
+						</div>
+					<div data-role="fieldcontain">
+						<label for="reps">How many reps?</label>
+						<input type="range" name="reps" id="reps"  value="1" min="0" max="12"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="weight">How much weight?</label>
+						<input type="range" name="weight" id="weight"  value="5" min="0" max="40"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="sets">How many sets?</label>
+						<input type="range" name="sets" id="sets"  value="3" min="0" max="6"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="warmCool">Include warm-up and cool-down?</label>
+						<select data-role="slider">
+							<option value="on">yes</option>
+							<option value="off">no</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<a href="#" data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" data-mini="true" data-theme="a">Save</a>
+						<a href="#" data-role="button" data-icon="gear" data-iconpos="right" data-inline="true" data-theme="a">WorkOut!</a>
+					</div>
+				</form>	
 			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
         		<section data-role="navbar" data-theme="a">
         			<ul>
@@ -97,12 +132,50 @@
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
-			<section data-role="content">
-				<p>Aerobics</p>
-				
-			
-				
-			</section>
+			<form action="" method="post" id="aerobicsForm" data-theme="b">
+				<label for="aeroForm">Choices:</label>
+				<div data-role="fieldcontain">
+					<label for="dateAdd">Workout Date:</label>
+							<input type="date" id="dateAdded" />
+				</div>
+				<div data-role="fieldcontain">
+						<label for="aerobicWorkout">Aerobics</label>
+						<select name="aerobicWorkout" id="aerobicWorkout" data-native-menu="false">
+							<option data-placeholder="true">Select a Workout</option>
+							<option value="walking">walking</option>
+							<option value="running">running</option>
+							<option value="TKDkicks">TKD kicks</option>
+							<option value="TKDpunches">TKD punches</option>
+							<option value="biking">biking</option>
+							<option value="planks">planks</option>
+							<option value="vSitCross">V sit cross crunch</option>
+							<option value="revPlank">reverse plank flutter kick</option>
+						</select>
+					</div>
+				<div data-role="fieldcontain">
+					<label for="speedTime">How long do you want the aerobic time?</label>
+					<input type="range" name="speedTime" id="speedTime"  value="1" min="0" max="5"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="restTime">How long do you want to rest between sets?</label>
+					<input type="range" name="restTime" id="restTime"  value="1" min="0" max="5"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="sets">How many sets (includes 1 speed and 1 rest)?</label>
+					<input type="range" name="sets" id="sets"  value="3" min="0" max="10"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="warmCool">Include warm-up and cool-down?</label>
+					<select data-role="slider">
+						<option value="on">yes</option>
+						<option value="off">no</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain">
+					<a href="#" data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" data-mini="true" data-theme="a">Save</a>
+					<a href="#" data-role="button" data-icon="gear" data-iconpos="right" data-inline="true" data-theme="a">WorkOut!</a>
+				</div>
+			</form>	
 			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
         		<section data-role="navbar" data-theme="a">
         			<ul>
@@ -120,9 +193,49 @@
 			</header>
 			<section data-role="content">
 				<p>Lifting</p>
-				
-			
-				
+				<form action="" method="post" id="liftingForm" data-theme="b">
+					<label for="liftForm">Choices:</label>
+					<div data-role="fieldcontain">
+						<label for="dateAdd">Workout Date:</label>
+								<input type="date" id="dateAdded" />
+					</div>
+					<div data-role="fieldcontain">
+							<label for="liftingWorkout">Lifting</label>
+							<select name="liftingWorkout" id="liftingWorkout" data-native-menu="false">
+								<option data-placeholder="true">Select a Workout</option>
+								<option value="bicepcurl">bicep curl</option>
+								<option value="triceppress">tricep press</option>
+								<option value="pushup">pushup</option>
+								<option value="shoulderraises">shoulder raises</option>
+								<option value="squats">squats</option>
+								<option value="lunges">lunges</option>
+								<option value="calfraises">calf raises</option>
+							</select>
+						</div>
+					<div data-role="fieldcontain">
+						<label for="reps">How many reps?</label>
+						<input type="range" name="reps" id="reps"  value="1" min="0" max="12"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="weight">How much weight?</label>
+						<input type="range" name="weight" id="weight"  value="5" min="0" max="40"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="sets">How many sets?</label>
+						<input type="range" name="sets" id="sets"  value="3" min="0" max="6"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="warmCool">Include warm-up and cool-down?</label>
+						<select data-role="slider">
+							<option value="on">yes</option>
+							<option value="off">no</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<a href="#" data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" data-mini="true" data-theme="a">Save</a>
+						<a href="#" data-role="button" data-icon="gear" data-iconpos="right" data-inline="true" data-theme="a">WorkOut!</a>
+					</div>
+				</form>		
 			</section>
 			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
         		<section data-role="navbar" data-theme="a">
@@ -134,6 +247,22 @@
         		</section>
         	</footer>
 		</section> <!-- /#lifting -->
+		
+		<section data-role="dialog" id="info" data-theme="a">
+			<div data-role="header" data-position="fixed">
+				<h3>Info</h3>
+			</div>
+			<div data-role="content">
+				<ul>
+					<li>Creator: Jenney Grover
+					</li>
+					<li>Date: August 2013
+					</li>
+					<li> <small>&copy 2013 Duffer Design. All Rights Reserved.<small>
+					</li>
+				</ul>
+			</div>
+		</section> <!-- /#dialogue info page -->
 		
 		<!-- The link for the jQuery code -->
 		<script src="js/jquery.js"></script>

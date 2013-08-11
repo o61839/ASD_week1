@@ -30,16 +30,22 @@
 		<!-- This is my css style sheet -->
 		<link href="css/main.css" rel="stylesheet" type="text/css" /> 
 	<body>
-		<section data-role="page" id="homepage" data-title="ViewSource: Home">
+		<section data-role="page" id="homepage" data-title="ViewSource: Home" data-theme="a">
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
-				<a href="#info" data-role="button" data-icon="info" data-iconpos="right">Info</a>
 			</header>
+			<section data-role="content">
+				<p>Need to set up your workout?</p>
+				<section data-role="control">
+					<a href="#newAerobic" data-role="button" data-icon="arrow-r" data-iconpos="right">20 Minute Challenge</a> 
+					<a href="#newChallenge" data-role="button" data-icon="arrow-r" data-iconpos="right">30 Day Challenge</a> 
+				</section>
+			</section>
 			<section data-role="content">
 				<p>What are you going to tackle today?</p>
 				<section data-role="control">
-					<a href="#aerobics" data-role="button" data-icon="arrow-r" data-iconpos="right">Aerobics</a> 
-					<a href="#lifting" data-role="button" data-icon="arrow-r" data-iconpos="right">Lifting</a> 
+					<a href="#aerobics" data-role="button" data-icon="arrow-r" data-iconpos="right">20 Minute Challenge</a> 
+					<a href="#lifting" data-role="button" data-icon="arrow-r" data-iconpos="right">30 Day Challenge</a> 
 				</section>
 			</section>
 			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
@@ -47,18 +53,19 @@
         			<ul>
         				<li><a href="#" data-role="button" data-icon="home" data-iconpos="right" class="ui-btn-active ui-state-persist" data-theme="a">Home</a></li>
         				<li><a href="#find" data-role="button" data-icon="search" data-iconpos="right" data-theme="a">Find</a></li>
-        				<li><a href="#new" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">New</a></li>
+        				<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="a">Info</a></li>
         			</ul>
         		</section>
         	</footer>
 		</section> <!-- /#homepage -->
 			
-		<section data-role="page" id="find" data-title="ViewSource: Find">
+		<section data-role="page" id="find" data-title="ViewSource: Find" data-theme="a">
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
 			<section data-role="content">
 				<p>What workout do you want to find? </p>
+				<p> Page is under construction. Come back soon. </p>
 				
 			</section>
 			<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
@@ -66,45 +73,70 @@
         			<ul>
         				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
         				<li><a href="#" data-role="button" data-icon="search" data-iconpos="right" class="ui-btn-active ui-state-persist" data-theme="a">Find</a></li>
-        				<li><a href="#new" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">New</a></li>
+        				<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="a">Info</a></li>
         			</ul>
         		</section>
         	</footer>
 		</section> <!-- /#find -->
 		
-		<section data-role="page" id="new" data-title="ViewSource: New">
+		<section data-role="page" id="newChallenge" data-title="ViewSource: New" data-theme="a">
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
 			<section data-role="content">
-				<p>Let's Add a Workout! </p>
+				<p>Let's Add a 30 day challenge! You can choose up to three!</p>
 			</section>
 			<form action="" method="post" id="liftingForm" data-theme="b">
-					<label for="liftForm">Choices:</label>
+					<label for="liftForm">Choice One:</label>
 					<div data-role="fieldcontain">
-							<label for="liftingWorkout">Lifting</label>
 							<select name="liftingWorkout" id="liftingWorkout" data-native-menu="false">
 								<option data-placeholder="true">Select a Workout</option>
-								<option value="bicepcurl">bicep curl</option>
-								<option value="triceppress">tricep press</option>
+								<option value="cardio">cardio</option>
+								<option value="ab">ab</option>
 								<option value="pushup">pushup</option>
-								<option value="shoulderraises">shoulder raises</option>
+								<option value="arm">arm</option>
 								<option value="squats">squats</option>
 								<option value="lunges">lunges</option>
-								<option value="calfraises">calf raises</option>
+								<option value="plank">plank</option>
+								<option value="burplee">burpee</option>
+								<option value="booty">booty</option>
 							</select>
-						</div>
+					</div>
+					<label for="liftForm">Choice Two:</label>
 					<div data-role="fieldcontain">
-						<label for="reps">How many reps?</label>
-						<input type="range" name="reps" id="reps"  value="1" min="0" max="12"/>
+							<select name="liftingWorkout" id="liftingWorkout" data-native-menu="false">
+								<option data-placeholder="true">Select a Workout</option>
+								<option value="nomore">no more</option>
+								<option value="cardio">cardio</option>
+								<option value="ab">ab</option>
+								<option value="pushup">pushup</option>
+								<option value="arm">arm</option>
+								<option value="squats">squats</option>
+								<option value="lunges">lunges</option>
+								<option value="plank">plank</option>
+								<option value="burplee">burpee</option>
+								<option value="booty">booty</option>
+							</select>
+					</div>
+					<label for="liftForm">Choice Three:</label>
+					<div data-role="fieldcontain">
+							<select name="liftingWorkout" id="liftingWorkout" data-native-menu="false">
+								<option data-placeholder="true">Select a Workout</option>
+								<option value="nomore">no more</option>
+								<option value="cardio">cardio</option>
+								<option value="ab">ab</option>
+								<option value="pushup">pushup</option>
+								<option value="arm">arm</option>
+								<option value="squats">squats</option>
+								<option value="lunges">lunges</option>
+								<option value="plank">plank</option>
+								<option value="burplee">burpee</option>
+								<option value="booty">booty</option>
+							</select>
 					</div>
 					<div data-role="fieldcontain">
-						<label for="weight">How much weight?</label>
-						<input type="range" name="weight" id="weight"  value="5" min="0" max="40"/>
-					</div>
-					<div data-role="fieldcontain">
-						<label for="sets">How many sets?</label>
-						<input type="range" name="sets" id="sets"  value="3" min="0" max="6"/>
+						<label for="reps">What level? </label>
+						<input type="range" name="reps" id="reps"  value="1" min="1" max="3"/>
 					</div>
 					<div data-role="fieldcontain">
 						<label for="warmCool">Include warm-up and cool-down?</label>
@@ -112,6 +144,10 @@
 							<option value="on">yes</option>
 							<option value="off">no</option>
 						</select>
+					</div>
+					<div data-role="fieldcontain">
+					<label for="dateAdd">Your challenge start date:</label>
+							<input type="date" id="dateAdded" />
 					</div>
 					<div data-role="fieldcontain">
 						<a href="#" data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" data-theme="a">Save</a>
@@ -123,13 +159,13 @@
         			<ul>
         				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
         				<li><a href="#find" data-role="button" data-icon="search" data-iconpos="right" data-theme="a">Find</a></li>
-        				<li><a href="#" data-role="button" data-icon="plus" data-iconpos="right" class="ui-btn-active ui-state-persist" data-theme="a">New</a></li>
+        				<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="a">Info</a></li>
         			</ul>
         		</section>
         	</footer>
-		</section> <!-- /#new -->
+		</section> <!-- /#newChallenge -->
 		
-		<section data-role="page" id="aerobics" data-title="ViewSource: Aerobics">
+		<section data-role="page" id="aerobics" data-title="ViewSource: Aerobics" data-theme="a">
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
@@ -182,13 +218,13 @@
         			<ul>
         				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
         				<li><a href="#find" data-role="button" data-icon="search" data-iconpos="right" data-theme="a">Find</a></li>
-        				<li><a href="#new" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">New</a></li>
+        				<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="a">Info</a></li>
         			</ul>
         		</section>
         	</footer>
 		</section> <!-- /#aerobics -->
 		
-		<section data-role="page" id="lifting" data-title="ViewSource: Lifting">
+		<section data-role="page" id="lifting" data-title="ViewSource: Lifting" data-theme="a">
 			<header data-role="header" data-position="fixed" data-id="vs_header">
 				<h1>Minute 2 Lose</h1>
 			</header>
@@ -243,13 +279,13 @@
         			<ul>
         				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
         				<li><a href="#find" data-role="button" data-icon="search" data-iconpos="right" data-theme="a">Find</a></li>
-        				<li><a href="#new" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">New</a></li>
+        				<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="a">Info</a></li>
         			</ul>
         		</section>
         	</footer>
 		</section> <!-- /#lifting -->
 		
-		<section data-role="dialog" id="info" data-theme="a">
+		<section data-role="page" id="info" data-theme="a">
 			<div data-role="header" data-position="fixed">
 				<h3>Info</h3>
 			</div>
@@ -263,6 +299,15 @@
 					</li>
 				</ul>
 			</div>
+		<footer data-role="footer" data-position="fixed" data-theme="a" data-id="vs_footer">
+        		<section data-role="navbar" data-theme="a">
+        			<ul>
+        				<li><a href="#homepage" data-role="button" data-icon="home" data-iconpos="right" data-theme="a">Home</a></li>
+        				<li><a href="#find" data-role="button" data-icon="search" data-iconpos="right" data-theme="a">Find</a></li>
+        				<li><a href="#" data-role="button" data-icon="info" data-iconpos="right" class="ui-btn-active ui-state-persist" data-theme="a">Info</a></li>
+        			</ul>
+        		</section>
+        	</footer>
 		</section> <!-- /#dialogue info page -->
 		
 		<!-- The link for the jQuery code -->

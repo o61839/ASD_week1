@@ -23,48 +23,56 @@ $('#newChallenge').on('pageinit', function()
   var showWorkOut = function()
 	{
 			//shows Challenge #1
-			//this creates the li and puts in the heading
-			var newLi1 = document.createElement('li'); 
-			document.getElementById('list').appendChild(newLi1); 
-			var heading1 = document.createElement('h3'); 
-			heading1.innerHTML = ("Challenge #1"); 
-			newLi1.appendChild(heading1); 
+			//this creates the li
+			var newLi1 = $('<li></li>'); 
+			$("list").append(newLi1);  
+			//this creates the heading and puts it into the li
+			var heading1 = $('<h3>Challenge #1</h3>'); 
+			newLi1.append(heading1); 
 			//this puts the value into a <p>
-			var work1 = document.getElementById('liftingWorkout1').value;
-			var pWork1 = document.createElement('p');
-			pWork1.innerHTML = work1; 
-			newLi1.appendChild(pWork1); 
+			var work1 = $('liftingWorkout1').val();
+			if (work1 != "placeHolder")
+			{
+				var pWork1 = $('<p></p>');
+				pWork1.text(work1); 
+				newLi1.append(pWork1); 
+			}
+			else
+			{
+				alert("You need to choose a workout!")
+			}
+			
 			//ends Challenge #1
 			
 			//shows Challenge #2
-			var work2 = document.getElementById('liftingWorkout2').value;
-			if (work2 != "nomore")
+			var work2 = $('liftingWorkout2').val();
+			if (work2 != "nomore" || "placeHolder")
 			{
 				//this creates the li and puts in the heading
-				var newLi2 = document.createElement('li'); 
-				document.getElementById('list').appendChild(newLi2); 
-				var heading2 = document.createElement('h3'); 
+				var newLi2 = $.createElement('li'); 
+				$.getElementById('list').appendChild(newLi2); 
+				var heading2 = $.createElement('h3'); 
 				heading2.innerHTML = ("Challenge #2"); 
 				newLi2.appendChild(heading2); 
 				//this puts the value into a <p>
-				var pWork2 = document.createElement('p');
+				var pWork2 = $.createElement('p');
 				pWork2.innerHTML = work2; 
 				newLi2.appendChild(pWork2); 
 				//ends Challenge #2
 			}
 			
 			//shows Challenge #3
-			var work3 = document.getElementById('liftingWorkout3').value;
-			if (work3 != "nomore")
+			var work3 = $.getElementById('liftingWorkout3').value;
+			if (work3 != "nomore" || "placeHolder")
 			{
 				//this creates the li and puts in the heading
-				var newLi3 = document.createElement('li'); 
-				document.getElementById('list').appendChild(newLi3); 
-				var heading3 = document.createElement('h3'); 
+				var newLi3 = $.createElement('li'); 
+				$.getElementById('list').appendChild(newLi3); 
+				var heading3 = $.createElement('h3'); 
 				heading3.innerHTML = ("Challenge #3"); 
 				newLi3.appendChild(heading3); 
 				//this puts the value into a <p>
-				var pWork3 = document.createElement('p');
+				var pWork3 = $.createElement('p');
 				pWork3.innerHTML = work3; 
 				newLi3.appendChild(pWork3); 
 				//ends Challenge #3
@@ -113,14 +121,14 @@ $('#newAerobic').on('pageinit', function()
 			
 		//shows Aerobics
 		//this creates the li and puts in the heading
-		var newLi4 = document.createElement('li'); 
-		document.getElementById('list').appendChild(newLi1); 
-		var heading4 = document.createElement('h3'); 
+		var newLi4 = $.createElement('li'); 
+		$.getElementById('list').appendChild(newLi1); 
+		var heading4 = $.createElement('h3'); 
 		heading4.innerHTML = ("Aerobics"); 
 		newLi4.appendChild(heading1); 
 		//this puts the value into a <p>
-		var work4 = document.getElementById('aerobicWorkout').value;
-		var pWork4 = document.createElement('p');
+		var work4 = $.getElementById('aerobicWorkout').value;
+		var pWork4 = $.createElement('p');
 		pWork4.innerHTML = work4; 
 		newLi4.appendChild(pWork4); 
 		//ends Aerobics

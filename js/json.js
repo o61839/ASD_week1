@@ -1,7 +1,7 @@
 /* 	Jenney Grover
-	VFW 1306
-	Project 4
-	June 27, 2013
+	ASD 1308
+	Project 2
+	August 2013
 */
 
 var json = {

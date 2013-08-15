@@ -40,43 +40,37 @@ $('#newChallenge').on('pageinit', function()
 			else
 			{
 				alert("You need to choose a workout!")
-			}
-			
-			//ends Challenge #1
+			}//ends Challenge #1
 			
 			//shows Challenge #2
 			var work2 = $('liftingWorkout2').val();
 			if (work2 != "nomore" || "placeHolder")
 			{
 				//this creates the li and puts in the heading
-				var newLi2 = $.createElement('li'); 
-				$.getElementById('list').appendChild(newLi2); 
-				var heading2 = $.createElement('h3'); 
-				heading2.innerHTML = ("Challenge #2"); 
-				newLi2.appendChild(heading2); 
+				var newLi2 = $('<li></li>'); 
+				$("list").append(newLi2);  
+				var heading2 = $('<h3>Challenge #2</h3>');
+				newLi2.append(heading2); 
 				//this puts the value into a <p>
-				var pWork2 = $.createElement('p');
-				pWork2.innerHTML = work2; 
-				newLi2.appendChild(pWork2); 
-				//ends Challenge #2
-			}
+				var pWork2 = $('<p></p>');
+				pWork2text.(work2); 
+				newLi2.append(pWork2); 
+			}//ends Challenge #2
 			
 			//shows Challenge #3
-			var work3 = $.getElementById('liftingWorkout3').value;
+			var work3 = $('liftingWorkout3').val();
 			if (work3 != "nomore" || "placeHolder")
 			{
 				//this creates the li and puts in the heading
-				var newLi3 = $.createElement('li'); 
-				$.getElementById('list').appendChild(newLi3); 
-				var heading3 = $.createElement('h3'); 
-				heading3.innerHTML = ("Challenge #3"); 
-				newLi3.appendChild(heading3); 
+				var newLi3 = $('<li></li>'); 
+				$("list").append(newLi3);  
+				var heading3 = $('<h3>Challenge #3</h3>');
+				newLi3.append(heading2); 
 				//this puts the value into a <p>
-				var pWork3 = $.createElement('p');
-				pWork3.innerHTML = work3; 
-				newLi3.appendChild(pWork3); 
-				//ends Challenge #3
-			}	
+				var pWork3 = $('<p></p>');
+				pWork3text.(work3); 
+				newLi3.append(pWork3); 	
+			}//ends Challenge #3
 			
 			//shows Level
 				//id = reps 
@@ -121,16 +115,14 @@ $('#newAerobic').on('pageinit', function()
 			
 		//shows Aerobics
 		//this creates the li and puts in the heading
-		var newLi4 = $.createElement('li'); 
-		$.getElementById('list').appendChild(newLi1); 
-		var heading4 = $.createElement('h3'); 
-		heading4.innerHTML = ("Aerobics"); 
-		newLi4.appendChild(heading1); 
+		var newLi4 = $('<li></li>'); 
+		$("list").append(newLi4);  
+		var heading4 = $('<h3>Aerobics</h3>');
+		newLi4.append(heading4); 
 		//this puts the value into a <p>
-		var work4 = $.getElementById('aerobicWorkout').value;
-		var pWork4 = $.createElement('p');
-		pWork4.innerHTML = work4; 
-		newLi4.appendChild(pWork4); 
+		var pWork4 = $('<p></p>');
+		pWork4text.(work4); 
+		newLi4.append(pWork4); 
 		//ends Aerobics
 		
 		//shows aerobic time 

@@ -101,6 +101,10 @@ $('#newChallenge').on('pageinit', function()
 		
 		
 	}// end goWorkOut()
+	
+	//button call for showWorkOut()
+	//button call for saveWorkOut ()
+	//button call for goWorkOut()
 
 	
 });	//end #newChallenge 

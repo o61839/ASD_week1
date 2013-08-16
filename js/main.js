@@ -102,6 +102,52 @@ $('#newChallenge').on('pageinit', function()
 		
 	}// end goWorkOut()
 	
+	$("#clearData").on("click", function(){
+        if(localStorage.length === 0){
+            alert("You have no workouts saved.");
+            window.location.reload("#homepage");
+        } else {
+            var confirmClear = confirm("Are you sure you want to delete all saved workout(s)?")
+            if (confirmClear) {
+                localStorage.clear();
+                alert("You have successfully cleared all saved workout(s)!");
+                $.mobile.changePage('#homepage');
+                window.location.reload();
+            } else {
+                alert("Your saved workout(s) ave not been deleted!");
+                window.location.reload();
+            }
+        }
+    });
+    
+     editWorkout = function(workoutKey){    
+        
+        $.mobile.changePage('#newWorkout');
+        
+        //var workoutKey = this.id;
+        var workoutInfo = localStorage.getItem(workoutKey);
+        var workoutLibrary = JSON.parse(workoutInfo);
+    
+        $("#characterName").val(workoutLibrary.characterName[0]);
+        $("#serverName").val(workoutLibrary.serverName[0]);
+        $("#race").val(workoutLibrary.race[0]).selectmenu();
+        $("#race").selectmenu('refresh');
+        $("#class").val(workoutLibrary.toonClass[0]).selectmenu();
+        $("#class").selectmenu('refresh');
+        $("#role").val(workoutLibrary.role[0]).selectmenu();
+        $("#role").selectmenu('refresh');
+        $("#specialization").val(workoutLibrary.specialization[0]);
+        $("#level").val(workoutLibrary.level[0]).slider('refresh');
+        $("#itemLevel").val(workoutLibrary.itemLevel[0]);
+        $("#professions").val(workoutLibrary.professions[0]);
+        $("#extraInfo").val(workoutLibrary.extraInfo[0]);
+        $("#keyStorage").val(workoutKey);
+        
+        $("#submitCharacter").val("Edit My Toon!");
+        $("#submitCharacter").button('refresh');
+
+    };
+	
 	//button call for showWorkOut()
 	//button call for saveWorkOut ()
 	//button call for goWorkOut()

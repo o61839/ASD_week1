@@ -37,8 +37,8 @@
 			<section data-role="content">
 				<p>Need to set up your workout?</p>
 				<section data-role="control">
-					<a href="#newAerobic" data-role="button" data-icon="arrow-r" data-iconpos="right">20 Minute Challenge</a> 
-					<a href="#newChallenge" data-role="button" data-icon="arrow-r" data-iconpos="right">30 Day Challenge</a> 
+					<a href="#newAerobic" data-role="button" data-icon="arrow-r" data-iconpos="right">Cardio, Aerobics, Abs, Arm, Booty</a> 
+					<a href="#newChallenge" data-role="button" data-icon="arrow-r" data-iconpos="right">Pushups, Planks, Burpees, Squats, Lunges</a> 
 				</section>
 			</section>
 		<!--	THIS NEEDS TO BE THOUGHT OUT MORE. 
@@ -197,27 +197,23 @@
 						<label for="aerobicWorkout">Aerobics</label>
 						<select name="aerobicWorkout" id="aerobicWorkout" data-native-menu="false">
 							<option data-placeholder="true" value="placeHolder">Select a Workout</option>
-							<option value="walking">walking</option>
-							<option value="running">running</option>
-							<option value="TKDkicks">TKD kicks</option>
-							<option value="TKDpunches">TKD punches</option>
-							<option value="biking">biking</option>
-							<option value="planks">planks</option>
-							<option value="vSitCross">V sit cross crunch</option>
-							<option value="revPlank">reverse plank flutter kick</option>
+							<option value="cardio">Cardio</option>
+							<option value="aerobics">Aerobics</option>
+							<option value="ab">Abs</option>
+							<option value="arm">Arms</option>
+							<option value="booty">Booty</option>
 						</select>
 					</div>
 				<div data-role="fieldcontain">
-					<label for="speedTime">How long do you want the aerobic time?</label>
-					<input type="range" name="speedTime" id="speedTime"  value="1" min="1" max="5"/>
+					<label for="day">What day is it today?</label>
+					<input type="range" name="day" id="day"  value="1" min="1" max="30"/>
 				</div>
 				<div data-role="fieldcontain">
-					<label for="restTime">How long do you want to rest between sets?</label>
-					<input type="range" name="restTime" id="restTime"  value="1" min="1" max="5"/>
-				</div>
-				<div data-role="fieldcontain">
-					<label for="sets">How many sets (includes 1 speed and 1 rest)?</label>
-					<input type="range" name="sets" id="sets"  value="3" min="1" max="10"/>
+					<label for="complete">Is workout Complete?</label>
+					<select data-role="slider">
+						<option value="on">yes</option>
+						<option value="off">no</option>
+					</select>
 				</div>
 				<div data-role="fieldcontain">
 					<label for="warmCool">Include warm-up and cool-down?</label>
